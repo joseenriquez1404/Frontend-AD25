@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Estilos generales */
+:root {
+    --primary-color: #1b2538;
+    --secondary-color: #5e78aa;
+    --third-color: #eef1f8;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--third-color);
+}
+
+a {
+    color: var(--third-color);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+    color: var(--secondary-color);
+}
+
+/* Estilos del encabezado */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+}
+
+header nav a {
+    margin: 0 10px;
+}
+
+header img {
+    height: 50px;
+}
+
+/* Estilos del contenido principal */
+
+#hero-section {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+#hero-section button {
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+/* Estilos de la lista de agenda */
+
+.agenda-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 auto;
+}
+
+#agenda {
+    text-align: center;
+}
+
+/* Estilos de los ponentes  */
+
+#speakers h2 {
+    text-align: center;
+}
+
+#speakers img {
+    width: 150px;
+
+}
+
+.speakers-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.speaker {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--secondary-color);
+}
+
+.speaker img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.speaker h3 {
+    margin: 10px 0;
+    background-color: transparent;
+}
+
+.speaker p {
+    background-color: transparent;
+    font-style: italic;
+}
+
+/* Estilos del pie de página */
+
+footer{
+    text-align: center;
+}
+
+/* Media Queries para Responsividad */
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    .speakers-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1025px) {
+    .speakers-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
